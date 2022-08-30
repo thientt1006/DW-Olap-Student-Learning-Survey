@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "SSAS_StudentLearningSurvey_DW", "SSAS_StudentLearningSurvey_DW\SSAS_StudentLearningSurvey_DW.dwproj", "{815BD75A-B196-4B2A-9E4E-9B311669880D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{815BD75A-B196-4B2A-9E4E-9B311669880D}.Development|Default.ActiveCfg = Development
+		{815BD75A-B196-4B2A-9E4E-9B311669880D}.Development|Default.Build.0 = Development
+		{815BD75A-B196-4B2A-9E4E-9B311669880D}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4D4BC7A-8626-4702-975A-A7330C18E532}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,280 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4f4d5dc5-50a7-4ee0-aceb-70139d3a57f4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact</ID>
+  <Name>Fact</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Fact</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5020" scrolltop="-3228" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="14208" y="10874" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4128" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00002010000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Fact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5020</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3228</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e70effc6-ff17-47e7-98aa-452d33c73dbe">
+    <DataSourceViewID>Student Learning Survey DW</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1b43199a-4c99-4c91-876d-d48e12f14d77">
+      <ID>Answer Amount</ID>
+      <Name>Answer Amount</Name>
+      <Type>Double</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a54b9d8-674c-4add-a41f-b7947cc7ef51">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b1726d0-4c0c-43ad-8e7d-c24bfa8f5256">
+            <TableID>dbo_Fact</TableID>
+            <ColumnID>Answer_Amount</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e652d4a4-66cf-4cf7-9b1e-e531f4781ca4">
+      <ID>Fact ID</ID>
+      <Name>Fact ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Double</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a3fb638c-425e-477f-b5ba-e15cb2c486ca">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ae0e539f-3fd9-4b46-9377-c0016475b460">
+            <TableID>dbo_Fact</TableID>
+            <ColumnID>FactID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="383ba156-2227-43eb-ab44-181519479a73">
+      <ID>Object ID</ID>
+      <Name>Object ID</Name>
+      <Type>Double</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e17fec2c-c926-4c99-8581-4a0e0f5bec57">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0739fe2c-ac8b-4e8d-854f-06ce74a26bad">
+            <TableID>dbo_Fact</TableID>
+            <ColumnID>ObjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1ba73e94-fba5-4ad5-8d26-63550d9bddef">
+      <ID>School Type ID</ID>
+      <Name>School Type ID</Name>
+      <Type>Double</Type>
+      <Content>Discretized</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5d28f13-6c25-4abf-abd8-fb2b989e6be0">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14388d9e-f207-4f02-b934-61e193fc8fa9">
+            <TableID>dbo_Fact</TableID>
+            <ColumnID>School_Type_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d7b0df1e-1127-4da4-bdda-1483ea933e37">
+      <ID>Year ID</ID>
+      <Name>Year ID</Name>
+      <Type>Double</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="317ddb93-1741-46cf-9c0c-238d259146d4">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8949ebc4-dc68-403d-bdc5-6d6c13af2b38">
+            <TableID>dbo_Fact</TableID>
+            <ColumnID>Year_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="c0ef0e85-6664-462e-98ad-25c099af3c62">
+      <ID>Naive Bayes</ID>
+      <Name>Naive Bayes</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="6f4b8fec-a36a-48e7-901c-f122b2d6a373">
+          <ID>Answer Amount</ID>
+          <Name>Answer Amount</Name>
+          <SourceColumnID>Answer Amount</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="a4d30cc3-aa25-4971-86c7-4837a14dd6a4">
+          <ID>Fact ID</ID>
+          <Name>Fact ID</Name>
+          <SourceColumnID>Fact ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="e6e9f348-84b2-49a7-a117-ba19780d46ab">
+          <ID>Object ID</ID>
+          <Name>Object ID</Name>
+          <SourceColumnID>Object ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="68b467c0-f4b9-4255-8edc-2d031b4f24e9">
+          <ID>School Type ID</ID>
+          <Name>School Type ID</Name>
+          <SourceColumnID>School Type ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9a87ef36-2483-449b-b80c-dfeba4331bf7">
+          <ID>Year ID</ID>
+          <Name>Year ID</Name>
+          <SourceColumnID>Year ID</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="dd0983b5-73eb-457f-81e3-818909215c12">
+      <ID>Clustering</ID>
+      <Name>Clustering</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="91cd8af1-d864-4d20-b665-81d693ce7888">
+          <ID>Answer Amount</ID>
+          <Name>Answer Amount</Name>
+          <SourceColumnID>Answer Amount</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="7d1d6f36-1fb1-4a42-9be4-17491bcd00a2">
+          <ID>Fact ID</ID>
+          <Name>Fact ID</Name>
+          <SourceColumnID>Fact ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="d726e200-3da9-416d-b516-5e067b749d36">
+          <ID>Object ID</ID>
+          <Name>Object ID</Name>
+          <SourceColumnID>Object ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="35645937-a0b2-4e02-8f22-71f977d6584b">
+          <ID>School Type ID</ID>
+          <Name>School Type ID</Name>
+          <SourceColumnID>School Type ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e4df96e0-1cd6-43ba-860d-b1d3caff47af">
+          <ID>Year ID</ID>
+          <Name>Year ID</Name>
+          <SourceColumnID>Year ID</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="fe06a56e-2186-4166-9843-1e86a8cc3cef">
+      <ID>Decision Tree</ID>
+      <Name>Decision Tree</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="854b456b-9dcf-4c94-ae52-487b147a5e8f">
+          <ID>Answer Amount</ID>
+          <Name>Answer Amount</Name>
+          <SourceColumnID>Answer Amount</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="69894b72-0236-426d-bb2f-a2fcae91afd8">
+          <ID>Fact ID</ID>
+          <Name>Fact ID</Name>
+          <SourceColumnID>Fact ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="fb06517e-e19b-4574-b4d4-7de0fd6aa2f6">
+          <ID>Object ID</ID>
+          <Name>Object ID</Name>
+          <SourceColumnID>Object ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3b19aafe-ee72-4b25-af27-d342d55b3a57">
+          <ID>School Type ID</ID>
+          <Name>School Type ID</Name>
+          <SourceColumnID>School Type ID</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fdd07b36-66a3-498b-b6b3-d77f6ec31f83">
+          <ID>Year ID</ID>
+          <Name>Year ID</Name>
+          <SourceColumnID>Year ID</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+  <ddl100_100:HoldoutMaxCases>1000</ddl100_100:HoldoutMaxCases>
+  <ddl100_100:HoldoutSeed>12</ddl100_100:HoldoutSeed>
+</MiningStructure>

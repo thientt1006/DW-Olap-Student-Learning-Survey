@@ -1,0 +1,216 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7e876027-cdbb-47b5-8868-7acaa0e5a928" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Student Learning Survey DW</ID>
+  <Name>Student Learning Survey DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Student Learning Survey DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Student_x0020_Learning_x0020_Survey_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Student_x0020_Learning_x0020_Survey_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="fd3da912-447d-4a98-8047-ad8ff78f23a0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact" msprop:design-time-name="97e03be8-b74b-4ed9-a0e8-debb526679d8" msprop:DbTableName="Fact" msprop:FriendlyName="Fact" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FactID" msprop:design-time-name="6cf6b931-5d08-4ffd-9cd4-088a95ede942" msprop:DbColumnName="FactID" msprop:FriendlyName="FactID" type="xs:double" />
+                  <xs:element name="Year_ID" msprop:design-time-name="1cead7ae-f0d6-46cc-9c74-671dac2d6711" msprop:DbColumnName="Year_ID" msprop:FriendlyName="Year_ID" type="xs:double" minOccurs="0" />
+                  <xs:element name="ObjectID" msprop:design-time-name="e749be0d-1ce4-4d02-a016-fba8cb9ba469" msprop:DbColumnName="ObjectID" msprop:FriendlyName="ObjectID" type="xs:double" minOccurs="0" />
+                  <xs:element name="School_Type_ID" msprop:design-time-name="3259b6b3-52a5-4f4f-ae02-a76b7408893b" msprop:DbColumnName="School_Type_ID" msprop:FriendlyName="School_Type_ID" type="xs:double" minOccurs="0" />
+                  <xs:element name="UniqueID" msprop:design-time-name="e38026a0-6c8e-4c75-a0b7-306b4193a5ef" msprop:DbColumnName="UniqueID" msprop:FriendlyName="UniqueID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Answer_Amount" msprop:design-time-name="e3f727c5-fb71-41e6-837a-197c9a668111" msprop:DbColumnName="Answer_Amount" msprop:FriendlyName="Answer_Amount" type="xs:double" minOccurs="0" />
+                  <xs:element name="No_Response_Amount" msprop:design-time-name="c93af07b-e0d6-490d-b72d-ba63310c87b7" msprop:DbColumnName="No_Response_Amount" msprop:FriendlyName="No_Response_Amount" type="xs:double" minOccurs="0" />
+                  <xs:element name="Survey_Amount" msprop:design-time-name="9603f271-de48-4ebc-ab60-4936ba755d82" msprop:DbColumnName="Survey_Amount" msprop:FriendlyName="Survey_Amount" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_SchoolType" msprop:design-time-name="a965a5ba-d4b5-4a03-b5ff-86f803338816" msprop:DbTableName="Dim_SchoolType" msprop:FriendlyName="Dim_SchoolType" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="School_Type_ID" msprop:design-time-name="d2004bb9-a7e8-4483-bf5e-ad7e91662a53" msprop:DbColumnName="School_Type_ID" msprop:FriendlyName="School_Type_ID" type="xs:double" />
+                  <xs:element name="School_Type" msprop:design-time-name="e082245a-4033-4083-bf83-3ce979aaad38" msprop:DbColumnName="School_Type" msprop:FriendlyName="School_Type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Object" msprop:design-time-name="b73f94b0-aaee-485f-a0ed-7fd5d37e21f4" msprop:DbTableName="Dim_Object" msprop:FriendlyName="Dim_Object" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ObjectID" msprop:design-time-name="d591d067-a651-4114-bc0a-640c3409ec0a" msprop:DbColumnName="ObjectID" msprop:FriendlyName="ObjectID" type="xs:double" />
+                  <xs:element name="Data_Level" msprop:design-time-name="def8e112-92f5-467d-ba35-faf1948903cc" msprop:DbColumnName="Data_Level" msprop:FriendlyName="Data_Level" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Student_Type" msprop:design-time-name="469a85f8-4b90-4d43-8955-aa6544b1357d" msprop:DbColumnName="Student_Type" msprop:FriendlyName="Student_Type" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Grade" msprop:design-time-name="0706abdb-04de-4f1f-9386-9bd255b3e047" msprop:DbColumnName="Grade" msprop:FriendlyName="Grade" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Year" msprop:design-time-name="ba19a4ba-33ad-4587-b113-4491c6dc57b1" msprop:DbTableName="Dim_Year" msprop:FriendlyName="Dim_Year" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Year_ID" msprop:design-time-name="76817cc9-7393-4fc8-9e87-381b4b5cef0b" msprop:DbColumnName="Year_ID" msprop:FriendlyName="Year_ID" type="xs:double" />
+                  <xs:element name="Year" msprop:design-time-name="00a6e2fb-b4a3-42c1-b776-8c40cdb0fe8d" msprop:DbColumnName="Year" msprop:FriendlyName="Year" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Question" msprop:design-time-name="7cbd1356-14fc-47ef-9243-096af42a9baa" msprop:DbTableName="Dim_Question" msprop:FriendlyName="Dim_Question" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="UniqueID" msprop:design-time-name="2c514779-1b45-4002-b20f-0077c7e656cc" msprop:DbColumnName="UniqueID" msprop:FriendlyName="UniqueID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="QuestionID" msprop:design-time-name="c05c0756-767b-4499-9f5f-10ed0daf0ae5" msprop:DbColumnName="QuestionID" msprop:FriendlyName="QuestionID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Question-Name" msprop:design-time-name="aa5a3adc-5e78-40a1-a028-8332d9b1dd07" msprop:DbColumnName="Question-Name" msprop:FriendlyName="Question-Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AnswerID" msprop:design-time-name="f91f2398-0b2e-4637-88f3-66988b890da7" msprop:DbColumnName="AnswerID" msprop:FriendlyName="AnswerID" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Sub_Dim_Answer" msprop:design-time-name="5acb8073-2fd0-46fb-98fd-2bbd44b69e8b" msprop:DbTableName="Sub_Dim_Answer" msprop:FriendlyName="Sub_Dim_Answer" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AnswerID" msprop:design-time-name="f4238696-2aac-4da5-9bbb-da6889f7fb83" msprop:DbColumnName="AnswerID" msprop:FriendlyName="AnswerID" type="xs:double" />
+                  <xs:element name="Answer_Detail" msprop:design-time-name="726a51c8-b978-4b1c-a293-eb19dda60c27" msprop:DbColumnName="Answer_Detail" msprop:FriendlyName="Answer_Detail" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="FactID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_SchoolType_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_SchoolType" />
+          <xs:field xpath="School_Type_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Object_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Object" />
+          <xs:field xpath="ObjectID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Year_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Year" />
+          <xs:field xpath="Year_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Question_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Question" />
+          <xs:field xpath="UniqueID" />
+        </xs:unique>
+        <xs:unique name="dbo_Sub_Dim_Answer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Sub_Dim_Answer" />
+          <xs:field xpath="AnswerID" />
+        </xs:unique>
+        <xs:keyref name="FK_Dim_Answer" refer="dbo_Sub_Dim_Answer_Constraint1">
+          <xs:selector xpath=".//dbo_Dim_Question" />
+          <xs:field xpath="AnswerID" />
+        </xs:keyref>
+        <xs:keyref name="FK_Dim_Question" refer="dbo_Dim_Question_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="UniqueID" />
+        </xs:keyref>
+        <xs:keyref name="FK_Dim_SchoolType" refer="dbo_Dim_SchoolType_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="School_Type_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_Dim_Year" refer="dbo_Dim_Year_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="Year_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_Dim_Object" refer="dbo_Dim_Object_Constraint1">
+          <xs:selector xpath=".//dbo_Fact" />
+          <xs:field xpath="ObjectID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Student_x0020_Learning_x0020_Survey_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
