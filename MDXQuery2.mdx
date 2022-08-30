@@ -1,0 +1,74 @@
+﻿-- 1. Thống kê xem có bao nhiêu học sinh tham gia khảo sát theo từng niên khóa?
+SELECT [Measures].[Survey Amount] ON COLUMNS,
+[Dim Year].[Year].MEMBERS ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 2. Số lượng sinh viên tham gia trả lời các mã câu hỏi bất kỳ, sắp xếp số lượng giảm dần.
+SELECT [Measures].[Answer Amount] ON COLUMNS,
+ORDER ([Dim Question].[Question ID].MEMBERS, [Measures].[Answer Amount], DESC) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 3. Số lượng sinh viên tham gia khảo sát theo từng loại trường trong năm học 2016/2017.
+SELECT [Measures].[Survey Amount] ON COLUMNS,
+[Dim School Type].[School Type].MEMBERS ON ROWS
+FROM [Student Learning Survey DW]
+WHERE [Dim Year].[Year].&[2016/2017];
+
+-- 4. Tỉ lệ sinh viên trả lời câu hỏi khi tham gia khảo sát.
+WITH MEMBER [Measures].[Avg Student] AS
+DIVIDE ([Measures].[Answer Amount], [Measures].[Survey Amount]), FORMAT_STRING = "0.00%"
+SELECT [Measures].[Avg Student] ON COLUMNS,
+[Dim Year].[Year].MEMBERS ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 5. Ở các cấp (quận - huyện ), số lượng từng loại sinh viên tham gia khảo sát.
+SELECT [Measures].[Survey Amount] ON COLUMNS,
+{[Dim Object].[Data Level].&[District], [Dim Object].[Data Level].&[Province]}*
+{[Dim Object].[Student Type].MEMBERS} ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 6. Tỉ lệ sinh viên trường công không phản hồi câu hỏi khi tham gia khảo sát.
+WITH MEMBER [Measures].[Avg SchoolType] AS
+[Measures].[No Response Amount]/[Measures].[Survey Amount], FORMAT_STRING = "00.00%"
+SELECT {[Measures].[No Response Amount], [Measures].[Survey Amount]
+		, [Measures].[Avg SchoolType]} ON COLUMNS,
+[Dim School Type].[School Type].&[Trường Công] ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 7. Top 10 Câu hỏi được trả lời nhiều nhất trong niên khóa 2016/2017.
+SELECT [Measures].[Answer Amount] ON COLUMNS,
+HEAD(
+	ORDER([Dim Question].[Unique ID].MEMBERS - [Dim Question].[Unique ID].[All]
+			, [Measures].[Answer Amount], DESC), 10) ON ROWS
+FROM [Student Learning Survey DW]
+WHERE [Dim Year].[Year].&[2016/2017];
+
+-- 8. Top 10 câu hỏi ít bị sinh viên “Ngó lơ” nhất.
+SELECT [Measures].[No Response Amount] ON COLUMNS,
+BOTTOMCOUNT(
+	[Dim Question].[Question ID].MEMBERS - [Dim Question].[Question ID].[Unknown]
+	, 10, [Measures].[No Response Amount]) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 9. Lấy ra các mã câu hỏi có 2 chữ cái bắt đầu là “NQ” và sắp xếp giảm dần số lượng trả lời.
+SELECT [Measures].[Answer Amount] ON COLUMNS, 
+FILTER(
+	ORDER([Dim Question].[Question ID].MEMBERS, [Measures].[Answer Amount], DESC)
+	, LEFT([Dim Question].[Question ID].CURRENTMEMBER.NAME, 2) = "NQ") ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 10. Liệt kê số lượng sinh viên không trả lời của từng mã câu trả lời của từng mã câu hỏi.
+SELECT [Measures].[No Response Amount] ON COLUMNS,
+NON EMPTY CROSSJOIN([Dim Question].[Question ID].MEMBERS
+					, [Dim Question].[Answer ID].MEMBERS) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 11. Top 5 câu hỏi được sinh viên trả lời nhiều nhất
+SELECT [Measures].[Answer Amount] ON COLUMNS,
+NON EMPTY TOPCOUNT ([Dim Question].[Question ID].[Question ID].MEMBERS, 5
+					, [Measures].[Answer Amount]) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 12. Với mỗi niêm khóa, liệt kê Top 5 câu hỏi được phản hồi nhiều nhất.
+SELECT [Measures].[Answer Amount] ON COLUMNS,
+NON EMPTY GENERATE()
