@@ -71,4 +71,25 @@ FROM [Student Learning Survey DW];
 
 -- 12. Với mỗi niêm khóa, liệt kê Top 5 câu hỏi được phản hồi nhiều nhất.
 SELECT [Measures].[Answer Amount] ON COLUMNS,
-NON EMPTY GENERATE()
+NON EMPTY GENERATE([Dim Year].[Year].[Year].MEMBERS - [Dim Year].[Year].[All].UNKNOWNMEMBER,
+		TOPCOUNT([Dim Year].[Year].CURRENTMEMBER * [Dim Question].[Question ID].[Question ID].MEMBERS
+		, 5, [Measures].[Answer Amount])) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 13. Trong niên khóa 2016/2017, liêt kê số lượng phản hồi khảo sát của từng mã câu hỏi và sắp xếp giảm dần.
+SELECT [Measures].[Answer Amount] ON COLUMNS,
+		NON EMPTY ORDER (CROSSJOIN([Dim Year].[Year].&[2016/2017]
+		, [Dim Question].[Question ID].[Question ID].MEMBERS)
+		, [Measures].[Answer Amount], DESC) ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 14. Tỉ lệ sinh viên phản hồi khảo sát trong từng niên khóa là bao nhiêu.
+SELECT [Measures].[Answer Percent] ON COLUMNS,
+NON EMPTY [Dim Year].[Year].[Year].MEMBERS ON ROWS
+FROM [Student Learning Survey DW];
+
+-- 15. Trong niên khóa 2019/2020, liệt kê Top 5 câu hỏi có tỉ lệ phản hồi cao nhất
+SELECT [Measures].[Answer Percent] ON COLUMNS,
+NON EMPTY TOPCOUNT([Dim Question].[Question ID].[Question ID].MEMBERS
+					, 5, [Measures].[Answer Percent]) ON ROWS
+FROM [Student Learning Survey DW];
