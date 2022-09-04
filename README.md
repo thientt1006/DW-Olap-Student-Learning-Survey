@@ -1,24 +1,24 @@
 # Data Warehouse & OLAP: Student Learning Survey
-## Môn học
-- Kho dữ liệu & OLAP - IS217.L12
-- GV: Đỗ Thị Minh Phụng
-## Nhóm sinh viên thực hiện
-| Họ và tên          | MSSV     |
-| -------------------|:--------:|
-| Đỗ Quốc Vinh       | 18521645 |
-| Trương Thanh Thiên | 18521431 |
+## Subject
+- Data Warehouse & OLAP - IS217.L12
+- Lecturer: Đỗ Thị Minh Phụng
+## Members
+| Full Name          | Student ID |
+| -------------------|:----------:|
+| Đỗ Quốc Vinh       | 18521645   |
+| Trương Thanh Thiên | 18521431   |
 
-## Mục lục
-1. Project Description
-2. Set up environment
-3. Dataset
-4. Data Warehouse Schema Design (Snowflake Schema)
-5. SQL Server Integration Services (SSIS)
-6. SQL Server Analysis Services (SSAS)
-7. Multidimensional Expressions (MDX)
-8. SQL Server Reporting Services (SSRS)
-9. Data Mining
-10. Common Errors
+## Table of contents
+1. [Project Description](#1-project-description)
+2. [Set up environment](#2-set-up-environment)
+3. [Dataset](#3-dataset)
+4. [Data Warehouse Schema Design (Snowflake Schema)](#4-data-warehouse-schema-design-snowflake-schema)
+5. [SQL Server Integration Services (SSIS)](#5-sql-server-integration-services-ssis)
+6. [SQL Server Analysis Services (SSAS)](#6-sql-server-analysis-services-ssas)
+7. [Multidimensional Expressions (MDX)](#7-multidimensional-expressions-mdx)
+8. [SQL Server Reporting Services (SSRS)](#8-sql-server-reporting-services-ssrs)
+9. [Data Mining](#9-data-mining)
+10. [Common Errors](#10-common-errors)
 
 ## 1. Project Description
 - Cleaning and dividing data into six excel files.
@@ -30,13 +30,13 @@
 
 ## 2. Set up environment
 - __Install SQL Server 2019 (Version Developer)__
-  - Link: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-  - Instructions: https://www.c-sharpcorner.com/article/step-by-step-installation-of-microsoft-sql-server-on-windows-system
+  - [Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+  - [Instructions]( https://www.c-sharpcorner.com/article/step-by-step-installation-of-microsoft-sql-server-on-windows-system)
 - __Install SQL Server Management Studio (SSMS) 18.12.1__: 
-  - Link: https://docs.microsoft.com/vi-vn/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+  - [Link](https://docs.microsoft.com/vi-vn/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 - __Install Visual Studio Community 2019 (version 16.11)__: 
-  - Link: https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads
-  - Instructions: https://www.tektutorialshub.com/visual-studio/how-to-download-and-install-visual-studio-2019
+  - [Link](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads)
+  - [Instructions](https://www.tektutorialshub.com/visual-studio/how-to-download-and-install-visual-studio-2019)
 - __Install SQL Server Integration Services (SSIS)__
 - __Install SQL Server Analysis Services (SSAS)__
 - __Install SQL Server Reporting Services (SSRS)__
